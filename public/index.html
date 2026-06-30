@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Navbat — shifoxona xaritasi</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+  <div class="page">
+    <header class="page-header">
+      <div>
+        <p class="eyebrow">Navbat</p>
+        <h1>Shifoxona xaritasi va navbat tizimi</h1>
+      </div>
+      <div class="view-switch">
+        <button id="btn-patient" class="switch-active">Bemor</button>
+        <button id="btn-doctor">Shifokor paneli</button>
+      </div>
+    </header>
+
+    <section id="patient-view">
+      <div class="symptom-box">
+        <p class="eyebrow">AI yo'naltiruvchi</p>
+        <div class="symptom-row">
+          <input id="symptom-input" placeholder="Alomatingizni yozing, masalan: boshim og'riyapti" />
+          <button id="symptom-btn" class="primary-btn">Tavsiya ol</button>
+        </div>
+      </div>
+      <p id="suggestion-text" class="suggestion-text" style="display:none;"></p>
+
+      <div class="main-grid">
+        <div class="floor-card">
+          <div class="floor-card-head">
+            <p class="eyebrow">Kampus xaritasi</p>
+            <h2>Bo'limlar bo'yicha joylashuv</h2>
+          </div>
+          <div id="floor-grid" class="floor-grid"></div>
+        </div>
+        <div id="detail-card" class="detail-card detail-empty">
+          <p>Xaritadan bo'lim tanlang yoki yuqorida alomatingizni yozing.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="doctor-view" style="display:none;">
+      <div id="doctor-grid" class="doctor-grid"></div>
+    </section>
+  </div>
+
+  <script src="/app.js"></script>
+</body>
+</html>
