@@ -1,0 +1,18 @@
+services:
+  - type: web
+    name: hospital-navbat
+    env: node
+    plan: free
+    buildCommand: npm install
+    startCommand: npm run migrate && npm run seed && npm start
+    envVars:
+      - key: DATABASE_URL
+        fromDatabase:
+          name: hospital-db
+          property: connectionString
+      - key: ANTHROPIC_API_KEY
+        sync: false
+
+databases:
+  - name: hospital-db
+    plan: free
